@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+  <meta name="author" content="WU EVA" />
+  <title>手机截屏下载demo</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="css/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="topBanner">
+  	<button class="pull-left btn btn-info glyphicon glyphicon-home"></button>某某应用
+  </div>
+  <div id="main" class="container">
+  	<div class="row" id="resdiv">
+  		<div id="restable">
+  			<ul>
+  				<li class="col-xs-12">
+  				<p class="text-center h4 yytitle b-b-1">
+  					某某结果告知单
+  				</p>
+  				</li>
+  				<li class="col-xs-12 h4">
+    				<p>
+    					 出其东门，有女如云
+              <br/> 虽则如云，匪我思存
+    					<br/> 衣不如新，人不如故
+    					<br/> 行至水穷处
+    					<br/>  坐看云起时
+    					<br/> 陌上花开
+    					<br/> 可缓缓归矣
+    					<br/>
+    				</p>
+  				</li>
+  				<li class="col-xs-12 text-center">
+  				    <span><img alt="" src="img/MSHKLogo.png" class ="ewm"/></span>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>
+  </div>
+</body>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/modal.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/html2canvas.js"></script>
+
+<script type="text/javascript">
+  $(function () {
+
+      var Winwidth = $(window).width();
+      $("#btnBack,#btnTJ").css({ "width": Winwidth * 0.4 + "px" });
+      //移动端不支持直接保存base64图片，所以页面加载之后，直接将页面重绘成图片，移动端可以直接长按进行保存
+      html2canvas(document.getElementById('main'), {
+          background: "#fff",
+          onrendered: function (canvas) {
+              var imgName="移动端页面重绘_EVA";
+              var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+              $(".res_table").html("<img src='" + image + "' alt='from canvas' name='" + imgName + "'/>");
+              $("#showM").showmodal({
+                  content: "请长按图片进行保存结果告知单",
+                  SWidth: "200",
+                  fontSize:"14px"
+              });
+          }
+
+      });
+
+  })
+
+$(window).resize(function(){
+  var Winwidth = $(window).width();
+  $("#btnBack,#btnTJ").css({ "width": Winwidth * 0.4 + "px" });
+})
+</script>
+</html>

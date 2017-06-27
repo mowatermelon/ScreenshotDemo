@@ -1,0 +1,11 @@
+/*!
+ * screenshot demo v1.0.0
+ *
+ * Copyright 20170627, Inc
+ * Licensed under the Apache License v2.0
+ *
+ * Designed and built with by @mowatermelon.
+ */
+ @charset "utf-8";
+
+  dir,menu,ul{display:block;list-style-type:disc;-webkit-margin-before:1em;-webkit-margin-after:1em;-webkit-margin-start:0;-webkit-margin-end:0;-webkit-padding-start:0}span{font-family:宋体;line-height:30px}ul li{list-style:none}.ewm{width:193px;height:189px;text-align:center}.col-xs-12 .pull-right{font-size:18px}#btnPrint{display:inline-block}.panel-body{padding:0 15px}#btnBack,#btnTJ{position:fixed;bottom:0}#btnBack{left:10px}#btnTJ{right:10px}.yytitle{font-weight:bolder;line-height:3}.t-i-2{text-indent:2em}.b-b-1{border-bottom:1px solid #a3a3a3}.topBanner{margin-bottom:1em;width:100%;background-color:#5bc0de;background-image:url(../../Image/logo.png);background-position:35% center;background-size:25px 25px;background-repeat:no-repeat;box-shadow:0 2px 10px 5px #a5a5a5;color:#fff;text-align:center;font-size:1pc;line-height:40px}button.glyphicon-home{margin-left:10px;line-height:26px}
