@@ -1,0 +1,3 @@
+# ScreenshotDemo
+网页截图保存demo
+利用了html2canvas将页面重绘之后以图片形式保存的demo，demo是针对pc端的图片保存，demo02是针对移动端的图片保存
